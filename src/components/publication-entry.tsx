@@ -16,7 +16,7 @@ export function PublicationEntry({
             alt={publication.title} 
             width={160}
             height={200}
-            className="rounded-lg" 
+            className="rounded-lg transition-all duration-300" 
           />
         </div>
       )}
@@ -24,8 +24,9 @@ export function PublicationEntry({
         <div className="flex flex-row gap-4 items-center mb-2">
           <p className="text-xs text-zinc-500">{publication.conference} {publication.year}</p>
           {publication.award && (
-            <div className="flex px-2 py-1 bg-gradient-to-r from-amber-50 to-rose-50 rounded-md items-center shadow-md border border-amber-100/50">
-              <p className="text-xs text-amber-700 font-medium">{publication.award}</p>
+            <div className="group flex px-2 py-1 bg-gradient-to-r from-amber-50 to-rose-50 rounded-md items-center shadow-md border border-amber-100/50 relative overflow-hidden hover:rotate-1 transition-all duration-300">
+              <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/90 to-transparent" />
+              <p className="text-xs text-amber-700 font-medium relative">{publication.award}</p>
             </div>
           )}
         </div>
