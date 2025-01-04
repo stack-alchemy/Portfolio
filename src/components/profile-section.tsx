@@ -31,6 +31,11 @@ export function ProfileSection({
         <h1 className="font-serif text-3xl font-light tracking-wide mb-3">
           {aboutMe.name}
         </h1>
+        {aboutMe.altName && (
+          <p className="text-zinc-600 text-md leading-relaxed tracking-wide mb-6">
+            {aboutMe.altName}
+          </p>
+        )}
         <p className="text-zinc-600 text-sm leading-relaxed tracking-wide uppercase mb-6">
           {aboutMe.title}
           <br />
