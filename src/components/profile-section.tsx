@@ -1,0 +1,101 @@
+import Image from "next/image";
+import { Github, Linkedin, Mail, Twitter, ArrowUpRight, GraduationCap } from 'lucide-react';
+import { AboutMe } from "@/data/aboutme";
+
+interface ProfileSectionProps {
+  aboutMe: AboutMe;
+}
+
+export function ProfileSection({
+  aboutMe,
+}: ProfileSectionProps) {
+
+  if (!aboutMe) {
+    return null;
+  }
+
+  return (
+    <div className="sticky top-12 space-y-8">
+      {aboutMe.imageUrl && (
+        <Image
+          src={aboutMe.imageUrl}
+          alt={aboutMe.name}
+          width={400}
+          height={500}
+          className="w-full object-cover rounded-sm"
+        />
+      )}
+      <div>
+        <h1 className="font-serif text-3xl font-light tracking-wide mb-3">
+          {aboutMe.name}
+        </h1>
+        <p className="text-zinc-600 text-sm leading-relaxed tracking-wide uppercase mb-6">
+          {aboutMe.title}
+          <br />
+          {aboutMe.institution}
+        </p>
+        <div className="flex gap-6 mb-6">
+          {aboutMe.blogUrl && (
+            <a href={aboutMe.blogUrl} className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300">
+              <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+              <span className="tracking-wider uppercase">Blog</span>
+            </a>
+          )}
+          {aboutMe.cvUrl && (
+            <a href={aboutMe.cvUrl} className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300">
+              <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+              <span className="tracking-wider uppercase">CV</span>
+            </a>
+          )}
+        </div>
+        <div className="space-y-2">
+          <a href={`mailto:${aboutMe.email}`}
+             className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+            <Mail size={14} />
+            {aboutMe.email}
+          </a>
+          {aboutMe.googleScholarUrl && (
+            <>
+              <br />
+              <a href={aboutMe.googleScholarUrl} className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+                <GraduationCap size={14} />
+                Google Scholar
+              </a>
+            </>
+          )}
+          {aboutMe.twitterUsername && (
+            <>
+              <br />
+              <a href={`https://twitter.com/${aboutMe.twitterUsername}`}
+                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+              <Twitter size={14} />
+              @{aboutMe.twitterUsername}
+              </a>
+            </>
+          )}
+          {aboutMe.githubUsername && (
+            <>
+              <br />
+              <a href={`https://github.com/${aboutMe.githubUsername}`}
+               className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+              <Github size={14} />
+              github.com/{aboutMe.githubUsername}
+              </a>
+            </>
+          )}
+          {aboutMe.linkedinUsername && (
+            <>
+              <br />
+              <a href={`https://www.linkedin.com/in/${aboutMe.linkedinUsername}`}
+                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+              <Linkedin size={14} />
+                linkedin.com/in/{aboutMe.linkedinUsername}
+              </a>
+            </>
+          )}
+        </div>
+      </div>
+
+    </div>
+  );
+}
