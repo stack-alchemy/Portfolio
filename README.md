@@ -7,7 +7,7 @@ In practice it could probably be used by anyone.
 It is meant to be customizeable, all through modifying the `src/data` - which have arrays of objects that are used to generate the website.
 
 For example, `src/data/publication.ts` contains an array like:
-```
+```typescript
 export const publicationData: Publication[] = [
   {
     year: "2023",
@@ -19,8 +19,24 @@ export const publicationData: Publication[] = [
   }
 ];
 ```
+To update your website, you can simply add objects to the array. 
 
-To update your website, you can simply add objects to the array. The schemas are defined in the same files, and many fields are optional for flexibility.
+The schemas are defined in the same files, and many fields are optional for flexibility:
+```typescript
+export interface Publication {
+  year: string;
+  conference: string;
+  title: string;
+  authors: string;
+  paperUrl?: string;
+  codeUrl?: string;
+  bibtex?: string;
+  tldr?: string;
+  imageUrl?: string;
+  award?: string;
+}
+```
+Any field with a `?` at the end is optional. Filling them in will create the UI components corresponding to them automatically.
 
 You can also change the order of the sections in `src/data/section-order.ts`, and if you want full customization you can just edit the React components in `src/components`.
 
