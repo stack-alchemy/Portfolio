@@ -20,7 +20,7 @@ export const publicationData: Publication[] = [
 ];
 ```
 
-To update your website, you can simply add objects to the array.
+To update your website, you can simply add objects to the array. The schemas are defined in the same files, and many fields are optional for flexibility.
 
 You can also change the order of the sections in `src/data/section-order.ts`, and if you want full customization you can just edit the React components in `src/components`.
 
