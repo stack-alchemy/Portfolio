@@ -21,7 +21,7 @@ export function PortfolioEntry({
         </div>
       )}
       <div className="flex flex-col flex-1">
-        <h3 className="font-serif text-lg mb-3">
+        <h3 className="font-serif text-md mb-3">
           {portfolio.projectUrl ? (
             <a 
               href={portfolio.projectUrl}
