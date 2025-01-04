@@ -5,6 +5,7 @@ export interface Experience {
   description?: string;
   advisor?: string;
   manager?: string;
+  companyUrl?: string;
 }
 
 export const experienceData: Experience[] = [
@@ -14,6 +15,7 @@ export const experienceData: Experience[] = [
     company: "DeepMind",
     description: "Developed novel algorithms for causal structure learning in reinforcement learning settings",
     advisor: "Peter Wang",
+    companyUrl: "https://deepmind.com",
   },
   {
     date: "Summer 2022",
@@ -21,5 +23,6 @@ export const experienceData: Experience[] = [
     company: "Google Research",
     description: "Worked on improving robustness of large language models to distribution shifts",
     manager: "Elise Brown",
+    companyUrl: "https://google.com",
   },
 ];

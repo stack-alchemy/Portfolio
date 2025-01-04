@@ -6,7 +6,18 @@ export function ExperienceEntry({ experience }: { experience: Experience }) {
       <span className="text-sm text-zinc-500">{experience.date}</span>
       <div className="col-span-3 flex flex-col">
         <h3 className="text-base">
-          {experience.title} — {experience.company}
+          {experience.title} — {experience.companyUrl ? (
+            <a 
+              href={experience.companyUrl}
+              className="hover:text-zinc-600 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {experience.company}
+            </a>
+          ) : (
+            experience.company
+          )}
         </h3>
         {experience.advisor && <p className="text-sm text-zinc-600 leading-relaxed italic mt-2">
           Advisor: {experience.advisor}

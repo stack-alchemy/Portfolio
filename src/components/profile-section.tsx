@@ -39,7 +39,16 @@ export function ProfileSection({
         <p className="text-zinc-600 text-sm leading-relaxed tracking-wide uppercase mb-6">
           {aboutMe.title}
           <br />
-          {aboutMe.institution}
+          {aboutMe.institutionUrl ? (
+            <a 
+              href={aboutMe.institutionUrl}
+              className="hover:text-zinc-900 transition-colors duration-300"
+            >
+              {aboutMe.institution}
+            </a>
+          ) : (
+            aboutMe.institution
+          )}
         </p>
         <div className="flex gap-6 mb-6">
           {aboutMe.blogUrl && (

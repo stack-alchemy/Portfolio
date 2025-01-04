@@ -14,6 +14,7 @@ export interface AboutMe {
     funDescription?: string; // Gets placed in the left sidebar
     secretDescription?: string; // Gets placed in the bottom
     altName?: string;
+    institutionUrl?: string;
 }
 
 export const aboutMe: AboutMe = {
@@ -30,6 +31,7 @@ export const aboutMe: AboutMe = {
     twitterUsername: "janesmith",
     blogUrl: "https://",
     cvUrl: "https://",
+    institutionUrl: "https://www.stanford.edu",
     // altName: "",
     // secretDescription: "I like dogs.",
 }
