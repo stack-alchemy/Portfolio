@@ -52,13 +52,21 @@ export function ProfileSection({
         </p>
         <div className="flex gap-6 mb-6">
           {aboutMe.blogUrl && (
-            <a href={aboutMe.blogUrl} className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300">
+            <a href={aboutMe.blogUrl} 
+              className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
               <span className="tracking-wider uppercase">Blog</span>
             </a>
           )}
           {aboutMe.cvUrl && (
-            <a href={aboutMe.cvUrl} className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300">
+            <a href={aboutMe.cvUrl} 
+              className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
               <span className="tracking-wider uppercase">CV</span>
             </a>
@@ -66,14 +74,20 @@ export function ProfileSection({
         </div>
         <div className="space-y-2">
           <a href={`mailto:${aboutMe.email}`}
-             className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+            className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Mail size={14} />
             {aboutMe.email}
           </a>
           {aboutMe.googleScholarUrl && (
             <>
               <br />
-              <a href={aboutMe.googleScholarUrl} className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+              <a href={aboutMe.googleScholarUrl} className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GraduationCap size={14} />
                 Google Scholar
               </a>
@@ -83,9 +97,12 @@ export function ProfileSection({
             <>
               <br />
               <a href={`https://twitter.com/${aboutMe.twitterUsername}`}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
-              <Twitter size={14} />
-              @{aboutMe.twitterUsername}
+                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Twitter size={14} />
+                @{aboutMe.twitterUsername}
               </a>
             </>
           )}
@@ -93,9 +110,12 @@ export function ProfileSection({
             <>
               <br />
               <a href={`https://github.com/${aboutMe.githubUsername}`}
-               className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
-              <Github size={14} />
-              github.com/{aboutMe.githubUsername}
+                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size={14} />
+                github.com/{aboutMe.githubUsername}
               </a>
             </>
           )}
@@ -103,8 +123,11 @@ export function ProfileSection({
             <>
               <br />
               <a href={`https://www.linkedin.com/in/${aboutMe.linkedinUsername}`}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
-              <Linkedin size={14} />
+                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin size={14} />
                 linkedin.com/in/{aboutMe.linkedinUsername}
               </a>
             </>
