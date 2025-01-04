@@ -20,7 +20,7 @@ export default function Home() {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Left Column - Fixed Info */}
-          <div className="col-span-12 md:col-span-4 space-y-12">
+          <div className="col-span-12 md:col-span-4 space-y-12 mb-8 md:mb-0">
             {/* Profile */}
             <div className="md:sticky top-12 space-y-8">
               <ProfileSection aboutMe={aboutMe} />
