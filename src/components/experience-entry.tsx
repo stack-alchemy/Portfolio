@@ -6,8 +6,9 @@ export function ExperienceEntry({ experience }: { experience: Experience }) {
       <span className="text-sm text-zinc-500">{experience.date}</span>
       <div className="col-span-3 flex flex-col">
         <h3 className="text-base">
-          {experience.title} — {experience.companyUrl ? (
-            <a 
+          {experience.title} —{" "}
+          {experience.companyUrl ? (
+            <a
               href={experience.companyUrl}
               className="hover:text-zinc-600 transition-colors"
               target="_blank"
@@ -19,15 +20,21 @@ export function ExperienceEntry({ experience }: { experience: Experience }) {
             experience.company
           )}
         </h3>
-        {experience.advisor && <p className="text-sm text-zinc-600 leading-relaxed italic mt-2">
-          Advisor: {experience.advisor}
-        </p>}
-        {experience.manager && <p className="text-sm text-zinc-600 leading-relaxed italic mt-2">
-          Manager: {experience.manager}
-        </p>}
-        {experience.description && <p className="text-sm text-zinc-600 leading-relaxed mt-2">
-          {experience.description}
-        </p>}
+        {experience.advisor && (
+          <p className="text-sm text-zinc-600 leading-relaxed italic mt-2">
+            Advisor: {experience.advisor}
+          </p>
+        )}
+        {experience.manager && (
+          <p className="text-sm text-zinc-600 leading-relaxed italic mt-2">
+            Manager: {experience.manager}
+          </p>
+        )}
+        {experience.description && (
+          <p className="text-sm text-zinc-600 leading-relaxed mt-2">
+            {experience.description}
+          </p>
+        )}
       </div>
     </div>
   );

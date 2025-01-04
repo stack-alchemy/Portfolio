@@ -13,7 +13,7 @@ export const educationData: Education[] = [
     year: "2021—Present",
     institution: "Stanford University",
     degree: "Ph.D. in Computer Science",
-    advisor: "Prof. Sarah Johnson"
+    advisor: "Prof. Sarah Johnson",
   },
   {
     year: "2017—2021",
@@ -22,5 +22,5 @@ export const educationData: Education[] = [
     thesis: "Algorithmic Approaches to Causal Discovery",
     // Optional links to thesis
     // thesisUrl: "https://dspace.mit.edu/handle/1721.1/149111"
-  }
+  },
 ];

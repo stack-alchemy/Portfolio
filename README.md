@@ -2,11 +2,12 @@
 
 This is a React + Next.js template meant for research websites. See a [demo of the template here](https://tovacinni.github.io/research-website-template/). My own [personal website](https://tovacinni.github.io) is also built with the same template.
 
-In practice it could probably be used by anyone. 
+In practice it could probably be used by anyone.
 
 It is meant to be customizeable, all through modifying the `src/data` - which have arrays of objects that are used to generate the website.
 
 For example, `src/data/publication.ts` contains an array like:
+
 ```typescript
 export const publicationData: Publication[] = [
   {
@@ -15,13 +16,15 @@ export const publicationData: Publication[] = [
     title: "Robust Causal Discovery Under Distribution Shift",
     authors: "Jane Smith, Xue Chen, Sarah Johnson",
     paperUrl: "https://arxiv.org/abs/2302.13095",
-    codeUrl: "https://github.com/jsmith/robust-causal-discovery"
-  }
+    codeUrl: "https://github.com/jsmith/robust-causal-discovery",
+  },
 ];
 ```
-To update your website, you can simply add objects to the array. 
+
+To update your website, you can simply add objects to the array.
 
 The schemas are defined in the same files, and many fields are optional for flexibility:
+
 ```typescript
 export interface Publication {
   year: string;
@@ -36,6 +39,7 @@ export interface Publication {
   award?: string;
 }
 ```
+
 Any field with a `?` at the end is optional. Filling them in will create the UI components corresponding to them automatically.
 
 You can also change the order of the sections in `src/data/section-order.ts`, and if you want full customization you can just edit the React components in `src/components`.
@@ -47,6 +51,7 @@ This project was birthed from annoyance over HTML + CSS templates- such as the v
 First, install Node.js and npm through the [Node.js official website](https://nodejs.org/).
 
 Verify installation by running:
+
 ```bash
 node --version
 npm --version
@@ -57,6 +62,7 @@ npm --version
 1. Fork the repository
 
 2. Clone the repository
+
    ```bash
    git clone [your-repository-url]
    cd [repository-name]
@@ -64,7 +70,8 @@ npm --version
 
 3. Install dependencies
 
-    Inside the repository, run:
+   Inside the repository, run:
+
    ```bash
    npm install
    ```
@@ -72,12 +79,12 @@ npm --version
 ## Running the Application
 
 1. To start the development server, run (in the repository directory):
+
    ```bash
    npm run dev
    ```
 
 2. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 
 ## Deploying onto GitHub Pages
 
@@ -92,7 +99,6 @@ npm --version
 5. Commit the build script and see things building.
 
 Your site should now be live at `https://[your-github-username].github.io/`.
-
 
 ## Deploying to your own domain
 

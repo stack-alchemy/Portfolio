@@ -1,4 +1,4 @@
-import { Education } from '@/data/education';
+import { Education } from "@/data/education";
 
 export function EducationEntry({ education }: { education: Education }) {
   return (
@@ -9,12 +9,20 @@ export function EducationEntry({ education }: { education: Education }) {
           <h3 className="text-base mb-1">{education.institution}</h3>
           <p className="text-sm text-zinc-600">{education.degree}</p>
           {education.advisor && (
-            <p className="text-sm text-zinc-500 mt-2 italic">Advisor: {education.advisor}</p>
+            <p className="text-sm text-zinc-500 mt-2 italic">
+              Advisor: {education.advisor}
+            </p>
           )}
           {education.thesis && (
             <p className="text-sm text-zinc-500 mt-2 italic">
-              Thesis: {education.thesisUrl ? (
-                <a href={education.thesisUrl} className="hover:underline" target="_blank" rel="noopener noreferrer">
+              Thesis:{" "}
+              {education.thesisUrl ? (
+                <a
+                  href={education.thesisUrl}
+                  className="hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {education.thesis}
                 </a>
               ) : (
@@ -22,7 +30,6 @@ export function EducationEntry({ education }: { education: Education }) {
               )}
             </p>
           )}
-
         </div>
       </div>
     </div>
