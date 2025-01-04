@@ -1,6 +1,6 @@
 # research-website-template
 
-This is a template for a personal website meant for researchers.
+This is a React + Next.js template meant for research websites.
 
 In practice it could probably be used by anyone. 
 
@@ -20,7 +20,7 @@ export const publicationData: Publication[] = [
 ];
 ```
 
-And to update your website, you can simply add objects to the array.
+To update your website, you can simply add objects to the array.
 
 You can also change the order of the sections in `src/data/section-order.ts`, and if you want full customization you can just edit the React components in `src/components`.
 
