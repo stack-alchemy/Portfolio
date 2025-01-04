@@ -21,9 +21,9 @@ export function ProfileSection({
           <Image
             src={aboutMe.imageUrl}
             alt={aboutMe.name}
-            width={400}
-            height={500}
-            className="w-full object-cover rounded-sm"
+            width={600}
+            height={800}
+            className="w-full object-cover rounded-xl"
           />
         </div>
       )}
