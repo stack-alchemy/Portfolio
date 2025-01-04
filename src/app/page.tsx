@@ -17,17 +17,17 @@ export default function Home() {
     <div className="min-h-screen bg-[#FFFCF8]">
       <div className="max-w-screen-xl mx-auto px-8 py-24">
         {/* Grid Layout */}
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Left Column - Fixed Info */}
-          <div className="col-span-4 space-y-12">
+          <div className="col-span-12 md:col-span-4 space-y-12">
             {/* Profile */}
-            <div className="sticky top-12 space-y-8">
+            <div className="md:sticky top-12 space-y-8">
               <ProfileSection aboutMe={aboutMe} />
             </div>
           </div>
 
           {/* Right Column - Scrolling Content */}
-          <div className="col-span-7 col-start-6 space-y-24">
+          <div className="col-span-12 md:col-span-7 md:col-start-6 space-y-24">
             {/* About section is typically first */}
             {aboutMe.description && (
               <section>

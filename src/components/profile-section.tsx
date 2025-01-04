@@ -15,17 +15,19 @@ export function ProfileSection({
   }
 
   return (
-    <div className="sticky top-12 space-y-8">
+    <div className="md:sticky top-12 flex flex-row-reverse md:flex-col gap-8 md:space-y-8">
       {aboutMe.imageUrl && (
-        <Image
-          src={aboutMe.imageUrl}
-          alt={aboutMe.name}
-          width={400}
-          height={500}
-          className="w-full object-cover rounded-sm"
-        />
+        <div className="w-1/3 md:w-full flex-shrink-0">
+          <Image
+            src={aboutMe.imageUrl}
+            alt={aboutMe.name}
+            width={400}
+            height={500}
+            className="w-full object-cover rounded-sm"
+          />
+        </div>
       )}
-      <div>
+      <div className="w-2/3 md:w-full">
         <h1 className="font-serif text-3xl font-light tracking-wide mb-3">
           {aboutMe.name}
         </h1>
