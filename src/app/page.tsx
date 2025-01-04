@@ -15,9 +15,10 @@ import { sectionOrder, Section } from "@/data/section-order";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#FFFCF8]">
-      <div className="max-w-screen-xl mx-auto px-8 py-24">
+      {/* Don't have a great call on whether max-w-screen-xl is better */}
+      <div className="max-w-screen-lg mx-auto px-8 py-24">
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Left Column - Fixed Info */}
           <div className="col-span-12 md:col-span-4 space-y-12">
             {/* Profile */}

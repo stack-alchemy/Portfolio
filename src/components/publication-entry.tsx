@@ -22,7 +22,7 @@ export function PublicationEntry({
       )}
       <div className="flex flex-col flex-1">
         <p className="text-xs text-zinc-500 mb-2">{publication.conference} {publication.year}</p>
-        <h3 className="font-serif text-lg mb-3">{publication.title}</h3>
+        <h3 className="font-serif text-md mb-3">{publication.title}</h3>
         <p className="text-sm text-zinc-600 mb-4">{publication.authors}</p>
         <div className="flex gap-6">
           {publication.paperUrl && (

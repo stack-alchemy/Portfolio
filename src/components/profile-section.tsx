@@ -15,16 +15,18 @@ export function ProfileSection({
   }
 
   return (
-    <div className="md:sticky top-12 flex flex-row-reverse md:flex-col gap-8 md:space-y-8">
+    <div className="md:sticky top-12 flex flex-row-reverse md:flex-col gap-4 md:space-y-8">
       {aboutMe.imageUrl && (
         <div className="w-1/3 md:w-full flex-shrink-0">
-          <Image
-            src={aboutMe.imageUrl}
-            alt={aboutMe.name}
-            width={600}
-            height={800}
-            className="w-full object-cover rounded-xl"
-          />
+          <div className="relative max-h-[45vh] md:w-[65%] aspect-[3/4]">
+            <Image
+              src={aboutMe.imageUrl}
+              alt={aboutMe.name}
+              fill
+              priority
+              className="object-cover rounded-xl"
+            />
+          </div>
         </div>
       )}
       <div className="w-2/3 md:w-full">
@@ -36,13 +38,15 @@ export function ProfileSection({
             {aboutMe.altName}
           </p>
         )}
-        <p className="text-zinc-600 text-sm leading-relaxed tracking-wide uppercase mb-6">
+        <p className="text-zinc-600 text-xs leading-relaxed tracking-wide uppercase mb-6">
           {aboutMe.title}
           <br />
           {aboutMe.institutionUrl ? (
             <a 
               href={aboutMe.institutionUrl}
               className="hover:text-zinc-900 transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {aboutMe.institution}
             </a>
