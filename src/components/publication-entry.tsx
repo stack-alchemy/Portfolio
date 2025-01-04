@@ -21,7 +21,14 @@ export function PublicationEntry({
         </div>
       )}
       <div className="flex flex-col flex-1">
-        <p className="text-xs text-zinc-500 mb-2">{publication.conference} {publication.year}</p>
+        <div className="flex flex-row gap-4 items-center mb-2">
+          <p className="text-xs text-zinc-500">{publication.conference} {publication.year}</p>
+          {publication.award && (
+            <div className="flex px-2 py-1 bg-gradient-to-r from-amber-50 to-rose-50 rounded-md items-center shadow-md border border-amber-100/50">
+              <p className="text-xs text-amber-700 font-medium">{publication.award}</p>
+            </div>
+          )}
+        </div>
         <h3 className="font-serif text-md mb-3">{publication.title}</h3>
         <p className="text-sm text-zinc-600 mb-4">{publication.authors}</p>
         <div className="flex gap-6">
