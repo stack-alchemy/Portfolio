@@ -7,6 +7,7 @@ export interface Portfolio {
   title: string;
   description: string;
   technologies?: string[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   imageUrl?: any;
   projectUrl?: string;
   logoUrl?: string;

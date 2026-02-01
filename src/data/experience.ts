@@ -6,6 +6,7 @@ export interface Experience {
   date: string;
   title: string;
   company: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   logo: any;
   description?: string[];
   advisor?: string;
