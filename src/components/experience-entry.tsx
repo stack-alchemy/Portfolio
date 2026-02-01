@@ -15,7 +15,7 @@ export function ExperienceEntry({ experience }: { experience: Experience }) {
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex justify-between">
+      <div className="flex flex-col sm:flex-row justify-start md:justify-between gap-2 sm:gap-0">
         <a
           href={experience.companyUrl}
           className="hover:text-zinc-600 transition-colors flex gap-1 items-center"
