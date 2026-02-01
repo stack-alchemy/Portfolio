@@ -16,7 +16,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
   return (
     <div className="flex md:flex-col gap-6 md:space-y-4">
       {aboutMe.imageUrl && (
-        <div className="w-1/2 md:w-full flex justify-center">
+        <div className="w-1/2 md:w-full flex justify-start md:justify-center">
           <Image
               src={aboutMe.imageUrl}
               alt={aboutMe.name}
