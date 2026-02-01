@@ -14,21 +14,18 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
   }
 
   return (
-    <div className="top-12 flex md:flex-col gap-8 md:space-y-8">
+    <div className="flex md:flex-col gap-6 md:space-y-4">
       {aboutMe.imageUrl && (
         <div className="w-1/2 md:w-full flex justify-center">
-          <div className="relative max-h-[45vh] w-full aspect-[3/4]">
-            <Image
+          <Image
               src={aboutMe.imageUrl}
               alt={aboutMe.name}
-              priority
-              className="w-full rounded-xl shadow-black shadow-md"
+              className="w-full sm:w-3/4 rounded-xl shadow-black shadow-md"
             />
-          </div>
         </div>
       )}
       <div className="w-1/2 md:w-full">
-        <h1 className="font-serif text-3xl font-light tracking-wide mb-3">
+        <h1 className="font-serif text-2xl md:text-3xl font-light tracking-wide mb-3">
           {aboutMe.name}
         </h1>
         {aboutMe.altName && (

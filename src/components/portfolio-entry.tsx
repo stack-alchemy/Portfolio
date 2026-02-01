@@ -4,8 +4,8 @@ import { Portfolio } from "@/data/portfolio";
 
 export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-6">
-      <hr />
+    <div className="flex flex-col md:flex-row gap-6">
+      <hr className="flex md:hidden" />
       {portfolio.imageUrl && (
         <div className="w-full sm:w-1/3 min-w-[160px] min-h-[120px] relative">
           <Image

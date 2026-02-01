@@ -19,19 +19,19 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Don't have a great call on whether max-w-screen-xl is better */}
-      <div className="max-w-screen-lg mx-auto px-8 py-12 md:py-24">
+      <div className="max-w-screen-lg mx-auto px-8 py-12 md:py-16">
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Left Column - Fixed Info */}
           <div className="col-span-12 md:col-span-4 space-y-12 mb-8 md:mb-0">
             {/* Profile */}
-            <div className="md:sticky top-12 space-y-8">
+            <div className="lg:sticky top-12 space-y-8">
               <ProfileSection aboutMe={aboutMe} />
             </div>
           </div>
 
           {/* Right Column - Scrolling Content */}
-          <div className="col-span-12 md:col-span-7 md:col-start-6 space-y-12">
+          <div className="col-span-12 md:col-span-8 md:col-start-6 space-y-12">
             {/* About section is typically first */}
             {aboutMe.description && (
               <section>
