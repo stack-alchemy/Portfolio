@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Geist, Geist_Mono, Noto_Serif, PT_Serif } from "next/font/google";
 import "./globals.css";
+import Logo from "@/assets/logo.svg";
 import { aboutMe } from "@/data/aboutme";
 import { customMetadata } from "@/data/title-description";
 const geistSans = Geist({
@@ -41,32 +43,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${ptSerif.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${ptSerif.variable} antialiased bg-[url('../assets/bg.png')] bg-cover bg-fixed`}
       >
         <main className="">{children}</main>
-        <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-[#FFFCF8]">
-          <div className="flex flex-row mx-auto max-w-7xl px-6 py-12 md:flex md:items-start md:justify-between ">
-            <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
-              <p>
-                © {new Date().getFullYear()} {aboutMe.name}.
-              </p>
+        <footer className="w-full">
+          <div className="flex flex-row mx-auto max-w-7xl px-6 py-3 justify-center ">
+            <div className="text-sm text-neutral-600 dark:text-neutral-400">
+              <div className="flex gap-2 items-center">
+                <Image src={Logo} alt="logo" width={20} />
+                <p className="text-sm">
+                  © {new Date().getFullYear()} {aboutMe.name}.
+                </p>
+              </div>
               {aboutMe.secretDescription && (
                 <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-4">
                   {aboutMe.secretDescription}
                 </p>
               )}
             </div>
-            <div className="mb-4">
-              <p className="text-sm text-neutral-500 dark:text-neutral-500 justify">
-                Built with{" "}
-                <a
-                  href="https://github.com/tovacinni/research-website-template"
-                  className="underline hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors"
-                >
-                  research-website-template
-                </a>
-              </p>
-            </div>
+
           </div>
         </footer>
       </body>

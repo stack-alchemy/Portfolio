@@ -1,16 +1,17 @@
+import Selfie from "@/assets/selfie.png"
+
 export interface AboutMe {
   name: string;
   title: string;
-  institution: string;
   description: string;
   email: string;
-  imageUrl?: string;
+  imageUrl?: any;
   blogUrl?: string;
   cvUrl?: string;
   googleScholarUrl?: string;
-  twitterUsername?: string;
-  githubUsername?: string;
-  linkedinUsername?: string;
+  telegram?: string;
+  github?: string;
+  linkedin?: string;
   funDescription?: string; // Gets placed in the left sidebar
   secretDescription?: string; // Gets placed in the bottom
   altName?: string;
@@ -18,22 +19,13 @@ export interface AboutMe {
 }
 
 export const aboutMe: AboutMe = {
-  name: "Jane R. Smith",
-  title: "Ph.D. Candidate",
-  institution: "Stanford University",
-  // Note that links work in the description
+  name: "Joseph A. Staley",
+  title: "Senior Full Stack Software Engineer",
   description:
-    "I'm a final-year <a href='https://www.stanford.edu'>PhD candidate</a> working at the intersection of causal inference and machine learning. My research focuses on developing robust, interpretable systems that can reason about cause and effect in complex environments.",
-  email: "______@stanford.edu",
+    "Senior Full-Stack Software Engineer with 10+ years of experience building and evolving scalable digital platforms across healthcare, education, and consumer domains. <br />Strong frontend foundation using React, Next.js, Angular, and Vue, paired with hands-on backend ownership across Python, Node.js, .NET, Java, Go, and Ruby. <br />Deep experience delivering regulated healthcare systems involving HIPAA compliance, EHR integrations, and interoperable clinical data standards. <br />Known for end-to-end ownership, pragmatic architecture, and close collaboration with product, clinical, and engineering teams.",
+  email: "joseph.aaron.staley@gmail.com",
+  linkedin: "https://www.linkedin.com/in/joseph-s-544231375",
+  github: "https://github.com/stack-alchemy",
   imageUrl:
-    "https://images.unsplash.com/photo-1581481615985-ba4775734a9b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  googleScholarUrl: "https://scholar.google.com/citations?user=bWtMl_MAAAAJ",
-  githubUsername: "janesmith",
-  linkedinUsername: "janesmith",
-  twitterUsername: "janesmith",
-  blogUrl: "https://",
-  cvUrl: "https://",
-  institutionUrl: "https://www.stanford.edu",
-  // altName: "",
-  // secretDescription: "I like dogs.",
+    Selfie,
 };

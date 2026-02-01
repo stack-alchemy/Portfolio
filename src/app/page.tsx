@@ -11,12 +11,15 @@ import { experienceData } from "@/data/experience";
 import { PortfolioEntry } from "@/components/portfolio-entry";
 import { portfolioData } from "@/data/portfolio";
 import { sectionOrder, Section } from "@/data/section-order";
+import { MdMapsHomeWork } from "react-icons/md";
+import { IoIosSchool } from "react-icons/io";
+import { GrGallery } from "react-icons/gr";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FFFCF8]">
+    <div className="min-h-screen">
       {/* Don't have a great call on whether max-w-screen-xl is better */}
-      <div className="max-w-screen-lg mx-auto px-8 py-24">
+      <div className="max-w-screen-lg mx-auto px-8 py-12 md:py-24">
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Left Column - Fixed Info */}
@@ -28,7 +31,7 @@ export default function Home() {
           </div>
 
           {/* Right Column - Scrolling Content */}
-          <div className="col-span-12 md:col-span-7 md:col-start-6 space-y-24">
+          <div className="col-span-12 md:col-span-7 md:col-start-6 space-y-12">
             {/* About section is typically first */}
             {aboutMe.description && (
               <section>
@@ -64,7 +67,8 @@ export default function Home() {
                   return (
                     educationData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-zinc-700 mb-12 tracking-wide uppercase">
+                        <h2 className="font-serif text-[20px] flex gap-2 items-center mb-4 tracking-wide uppercase">
+                          <IoIosSchool size={24} />
                           Education
                         </h2>
                         <div className="space-y-12">
@@ -99,10 +103,11 @@ export default function Home() {
                   return (
                     experienceData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                        <h1 className="font-serif text-[20px] mb-4 tracking-wide uppercase flex gap-2 items-center">
+                          <MdMapsHomeWork size={20} />
                           Experience
-                        </h2>
-                        <div className="space-y-12">
+                        </h1>
+                        <div className="space-y-6">
                           {experienceData.map((experience, index) => (
                             <ExperienceEntry
                               key={index}
@@ -117,10 +122,11 @@ export default function Home() {
                   return (
                     portfolioData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                        <h2 className="font-serif text-[20px] flex gap-2 items-center tracking-wide mb-4 uppercase">
+                          <GrGallery size={20} />
                           Portfolio
                         </h2>
-                        <div className="space-y-12">
+                        <div className="space-y-6">
                           {portfolioData.map((portfolio, index) => (
                             <PortfolioEntry key={index} portfolio={portfolio} />
                           ))}
